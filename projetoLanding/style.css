@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a :hover {
+    background: rgba(0, 0, 0, .05);
+}
+
+
+#header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* INICIO */
+.inicio {
+    font-size: 1.2rem;
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.inicio video {
+    max-width: 960px;
+    padding-bottom: 30px;
+
+}
+
+/* QUEM SOMOS */
+.quem-somos{
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+}
+
+.imagem{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.container-quemSomos{
+    flex: 2;
+    margin: 0 10px;
+}
+
+.quem-somos h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+
+}
+
+/* NOSSOS SERVIÇOS */
+.nossos-servicos{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+}
+
+.imagem{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.container-nossosservicos{
+    flex: 2;
+    margin: 0 10px;
+}
+
+.nossos-servicos h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+
+}
+
+/* FORMULÁRIO */
+
+.container-formulario h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+    
+}
+
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form input {
+    outline: unset;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.form textarea {
+    outline: unset;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+
+.form input[type=submit] {
+    background-color: #000000;
+    color:white;
+    cursor: pointer;
+    
+}
+
+.form label {
+    margin-left: 20px;
+}
+
+#align-form {
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 16.9em;
+}
+/* FOOTER */
+
+footer {
+    display: flex;
+    height: 200px;
+    background-color: #000000;
+    align-items: center;
+    color: white;
+    justify-content: center;
+   
+
+}
+
+.media {
+    display: flex;
+    justify-content: center;
+    /* padding-left: 10px; */
+}
+
+.media img {
+    padding: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 960px){
+
+    /* MENU */
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        right: 0px;
+        background: black;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+        
+    }
+    #nav.active #menu {
+        height: calc(100vh - 100px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1 rem 0 ;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgb(247, 243, 243);
+        
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+        
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        display: block;
+        
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-color: transparent;
+
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    /* INICIO */
+
+    .inicio video {
+        max-width: 100%;
+        padding-bottom: 30px;
+    
+    }
+
+    /* QUEM SOMOS */
+
+    .quem-somos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagem{
+        display: flex;
+        justify-content: center;
+    }
+    .imagem img {
+        display:flex;
+        max-width: 100%;
+        padding-bottom: 30px;
+
+    }
+    
+    /* NOSSOS SERVIÇOS */
+
+    .nossos-servicos{
+        display: flex;
+        flex-direction: column;
+    }
+
+  
+    /* FORMULÁRIO */
+    .container-formulario h1 {
+        font-size: 3em;
+        margin-bottom: .5em;
+        padding-left: 20px;
+        
+    }
+    #align-form {
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 0 4.2em;
+    }
+
+    .form input {
+        outline: unset;
+        padding: 20px;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    
+    .form textarea {
+        outline: unset;
+        padding: 20px;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 20px;
+        
+    }
+
+}
